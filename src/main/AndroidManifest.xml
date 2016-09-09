@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.sjha3.criminalintent">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.Camera"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,9 +19,15 @@
         <activity
             android:name=".CrimePagerActivity"
             android:label="@string/app_name">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                       android:value=".CrimeListActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CrimeListActivity"/>
         </activity>
+        <activity
+            android:name=".CrimeCameraActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
